@@ -1,6 +1,6 @@
 #include <drogon/HttpController.h>
 #include <drogon/drogon.h>
-#include "init/initDatabase.h"
+#include "initDatabase.h"
 #include <atomic>
 
 using namespace drogon;

@@ -20,5 +20,5 @@ cmake -DCMAKE_BUILD_TYPE=Debug ..
 echo "正在编译项目..."
 make -j$(nproc)
 
-echo "构建完成，二进制文件在 bin/ 目录下"
+echo "构建完成"
 

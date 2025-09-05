@@ -1,7 +1,7 @@
 #include <drogon/HttpController.h>
 #include <drogon/drogon.h>
 #include <drogon/orm/DbClient.h>
-#include "init/initDatabase.h"
+#include "initDatabase.h"
 
 using namespace drogon;
 
