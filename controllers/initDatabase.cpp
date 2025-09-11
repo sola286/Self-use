@@ -5,14 +5,12 @@
 using namespace drogon::orm;
 using namespace std;
 
-void initDatabase(const DbClientPtr &client)
+string initDatabase(const DbClientPtr &client)
 {
     if (!client) {
         cerr << "initDatabase DbClientPtr is nullptr!" << endl;
-        return;
+        return "DbClientPtr is nullptr!";
     }
-
-        cerr << "initDatabase DbClientPtr is success!" << endl;
     try {
         // Users 表
         client->execSqlSync(
@@ -42,5 +40,8 @@ void initDatabase(const DbClientPtr &client)
 
     } catch (const std::exception &e) {
         cerr << "initDatabase error: " << e.what() << endl;
+        return "initDatabase error: " + std::string(e.what());
     }
+    cerr << "initDatabase DbClientPtr is success!" << endl;
+    return "DbClientPtr is success!";
 }
